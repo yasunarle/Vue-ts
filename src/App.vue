@@ -1,29 +1,55 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id="app">            
+    <MyHeader/>
+    <router-view></router-view>  
+    <MyFooter/>  
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import Card from './components/Card.vue';
+import MyHeader from './components/MyHeader.vue';
+import MyFooter from './components/MyFooter.vue';
+import axios from "axios";
 
 @Component({
   components: {
-    HelloWorld,
+    Card,
+    MyHeader,
+    MyFooter
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  // data
+  public msg: string = "Hello by App.vue"
+}
 </script>
 
 <style lang="scss">
+body{
+  margin: 0;
+  padding: 0;    
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.component{
+  height: auto;
+  padding: 10px;
+  box-shadow: 1px 1px 5px 1px #999;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  -moz-osx-font-smoothing: grayscale;  
+  color: #2c3e50;  
 }
 </style>
