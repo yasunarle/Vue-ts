@@ -33,7 +33,7 @@ body{
   *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
   }
   a{
     text-decoration: none;
@@ -47,7 +47,8 @@ body{
   box-shadow: 1px 1px 5px 1px #999;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  // font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
   color: #2c3e50;  
